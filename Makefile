@@ -16,9 +16,9 @@ help:
 ## PUBLISH ####################################################################
 
 publish:
-	# TODO_DOCS_URI is a shell environment variable that contains the
+	# PYWICTA_DOCS_URI is a shell environment variable that contains the
 	# destination URI of the HTML files.
-	@if test -z $$TODO_DOCS_URI ; then exit 1 ; fi
+	@if test -z $$PYWICTA_DOCS_URI ; then exit 1 ; fi
 
 	# Upload the HTML files
-	rsync -r -v -e ssh --exclude=".gitignore" --exclude=".git/" ./ ${TODO_WEBSITE_URI}/
+	rsync -r -v -e ssh --exclude=".gitignore" --exclude=".git/" ./ ${PYWICTA_WEBSITE_URI}/
